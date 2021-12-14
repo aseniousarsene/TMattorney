@@ -1,0 +1,268 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  #container {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+/* header */
+header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  /* background:url('../../assets/images/serviceback.svg') no-repeat,url('../../assets/images/call-center.jpg') no-repeat */
+  ;
+  background:url('../../assets/images/call-center.jpg') no-repeat;
+
+  /* background-position:0,right; */
+
+  background-size:cover;
+
+
+}
+
+.nav1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+
+.nav1{
+  background:url('../../assets/images/navback.svg');
+  height: 80px;
+  background-color: rgb(170, 157, 206);
+  background-size: cover;
+  z-index: 5898989898989876776767676767 ;
+
+}
+
+.logo-main {
+
+}
+
+.logo {
+  height: 5em;
+  width: auto;
+  }
+
+  .logo-main h1 {
+    float: right;
+    font-size: 90%;
+   margin-top: 30px;
+   font-weight: 700;
+   color:rgba(245, 245, 245, 0.781);
+   letter-spacing:0px ;
+   word-spacing: 0px;
+   font-family: Kalam;
+   padding-right: 0px;
+  }
+  .title {
+   color:#53549b;
+   font-size: 80%;
+   font-weight: 700;
+   font-family: lato;
+ }
+.hero-svg-background{
+  background:url('../../assets/images/serviceback.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 55vw;
+  z-index: 0;
+}
+
+ .hero-serive {
+position: absolute;
+top: 30%;
+left: 5%;
+width: 40vw;
+height: 100px;
+ }
+
+ .hero-title {
+  color: #3C3C3C;
+  font-size: 20px !important ;
+ }
+
+ .hero-subtitle{
+   color: #3C3C3C;
+ }
+
+ .hero-subtitle h1{
+  font-size: 36px;
+  line-height: 46px;
+}
+
+ .hero-subtitle p{
+  font-size: 16px;
+  line-height: 24px;
+}
+/* nav 2 */
+.nav2{
+  /* float: n; */
+  height: 15vh;
+  width: 100%;
+  background-color:white;
+  color: #3e1750;
+
+
+  border-bottom: 0.5px solid rgba(226, 222, 222, 0.712);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+}
+
+.main-nav2 {
+  display: flex;
+  list-style: none;
+font-size: 80% ;
+justify-content: space-around;
+align-items: center;
+margin-top: 10px;
+text-align: right;
+}
+
+/* .main-nav2 li:nth-child(2) {
+  align-self: flex-start;
+} */
+
+.main-nav2 li:nth-child(1) {
+  margin-left: 0;
+}
+ .main-nav2 li {
+  display: inline-block;
+  margin-left: 25px;
+  font-family: 'lato';
+  font-weight: 700;
+  font-size:17px;
+  display: flex;
+}
+
+.main-nav2 li a:link,
+.main-nav2 li a:visited {
+  text-decoration: none;
+
+  color: rgb(78, 76, 76);
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav2 li a:hover,
+.main-nav2 li a:active {
+  border-bottom: 2px solid  #a02bc3;
+}
+/* sticky nav */
+
+.fixednav{
+  position:fixed;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  /* box-shadow: 0px 2px 2px rgb(250, 248, 248); */
+  z-index: 99999999;
+
+}
+.selected {
+  color: #121403 !important;
+  background-color: #1908201a;
+}
+
+.debt {
+  width: 100%;
+  height: 250px;
+  background-color: #53549b;
+}
+.data {
+  width: 100%;
+  height: 250px;
+  background-color: #9b680a;
+}
+
+.property {
+  width: 100%;
+  height: 250px;
+  background-color: #791b2f;
+}
+
+.litigation {
+  width: 100%;
+  height: 250px;
+  background-color: #207567;
+}
+
+.commercial {
+  width: 100%;
+  height: 250px;
+  background-color: #090a1a;
+}
+
+
+
+
+
+
+
+/*
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #555;
+  padding: 6px 0;
+}
+.sticky .logo-main h1{
+color: rgb(32, 30, 30);
+margin-top: 15px;
+}
+.sticky .main-nav {
+  margin-top: 12px;
+
+
+}
+.sticky .logo{
+  height: 2em;
+} */
+
+/*
+@media all and (min-width: 992px) {
+  .navi-item {
+   position: relative;
+ }
+ .main-nav .navi-item .dropdown-menu1{ display: none; }
+
+ .main-nav .navi-item:hover .dropdown-menu1{ display: block;
+}
+ .main-nav .navi-item .dropdown-menu1{
+                                         position: absolute;
+                                         background: linear-gradient(to right,rgba(0, 0, 0, 0.842),rgba(0, 0, 0, 0.089)) ;
+                                         font-size: 95% ;
+                                         padding:0;
+                                         min-width: 300px;
+                                         height: 30vh;
+                                         margin-top: 1px;
+                                         transform:translateX(-25%);
+
+
+                                      }
+
+
+   .main-nav .navi-item .dropdown-menu1 li {
+                                     padding: 4px;
+                                     margin-left: 0px;
+                                     display: block;
+
+                                         }
+ .dropdown-menu1 .dropdown-item1:hover { */
+   /* background-color: transparent;
+   padding: 4px;
+                                     margin-left: 0px;
+                                     display: block; */
+ /* }
+} */

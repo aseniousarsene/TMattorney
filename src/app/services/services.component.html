@@ -1,0 +1,56 @@
+<div #doc id="container"   >
+
+<header >
+
+  <nav class="nav1">
+  <div class="logo-main">
+    <img src="..\assets\images\pp-removebg.png" alt="" class="logo">
+    <h1>TM<span class="title">Attorneys</span></h1>
+
+  </div>
+  </nav>
+  <div class="hero-svg-background">
+
+  </div>
+
+  <div class="hero-serive">
+    <div class="hero-title">SERVICES AND SUPPORT
+    </div>
+    <div class="hero-subtitle">
+      <h1>Get the help you need </h1>
+      <p>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis nisi itaque hic ullam assumenda blanditiis sequi quae, rem id dolorum quod eum eligendi nemo
+    </p>
+    </div>
+
+  </div>
+  <!-- nav2 -->
+ <div class="nav2" id="navstick">
+
+  <div>
+
+ <ul class="main-nav2" >
+   <li><a href="#" [class.selected]="scroll >=0 && scroll <datasection "><strong>debt collection<br>and Account Management</strong></a></li>
+   <li><a href="#" [class.selected]="scroll >=datasection && scroll < propertysection">Data Purification</a></li>
+   <li><a href="#" [class.selected]="scroll >=propertysection && scroll < litigationsection">Property<br>And Coneyancing</a></li>
+   <li><a href="#" [class.selected]="scroll >=litigationsection && scroll < commercialsection">Litigation</a></li>
+   <li><a href="#" [class.selected]="scroll >= commercialsection">Commercial Contract</a></li>
+ </ul>
+  </div>
+
+ </div>
+
+</header>
+
+
+
+
+
+
+<section class="debt" #debt></section>
+<section class="data" #data></section>
+<section class="property" #property></section>
+<section class="litigation" #litigation></section>
+<section class="commercial" #commercial></section>
+
+</div>
