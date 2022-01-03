@@ -27,7 +27,8 @@ header {
 .nav1 {
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  width: 100%;
 
 }
 
@@ -36,7 +37,7 @@ header {
   height: 80px;
   background-color: rgb(170, 157, 206);
   background-size: cover;
-  z-index: 5898989898989876776767676767 ;
+  z-index: 5898989898989876776767676767 !important;
 
 }
 
