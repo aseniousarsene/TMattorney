@@ -83,13 +83,65 @@ export class ServicesComponent implements OnInit {
    handler: (direction:any) => {
      if (direction == 'down'){
        $('.nav2').addClass('fixednav');
+       $('.logo-on-fix').addClass('logo-on-fix-show');
+       $('.talk').addClass('talk-show');
 
      } else {
        $('.nav2').removeClass('fixednav');
+       $('.logo-on-fix').removeClass('logo-on-fix-show');
+       $('.talk').removeClass('talk-show');
      };
      },
      // offset: '2px'
  });
+
+ const donut = new Waypoint({
+  element: document.getElementById('donut'),
+
+  handler: (direction:any) => {
+    if (direction == 'down'){
+      $('.action').addClass('donut-segment');
+      $('.action').addClass('donut-segment-2 ');
+
+    } else {
+      $('.action').removeClass('donut-segment');
+      $('.action').removeClass('donut-segment-2');
+    };
+    },
+    offset: '350px'
+});
+
+const donut2 = new Waypoint({
+  element: document.getElementById('donut'),
+
+  handler: (direction:any) => {
+    if (direction == 'down'){
+      $('.action2').addClass('donut-segment');
+      $('.action2').addClass('donut-segment-3 ');
+
+    } else {
+      $('.action2').removeClass('donut-segment');
+      $('.action2').removeClass('donut-segment-3');
+    };
+    },
+    offset: '350px'
+});
+
+const donut3 = new Waypoint({
+  element: document.getElementById('donut'),
+
+  handler: (direction:any) => {
+    if (direction == 'down'){
+      $('.action3').addClass('donut-segment');
+      $('.action3').addClass('donut-segment-4 ');
+
+    } else {
+      $('.action3').removeClass('donut-segment');
+      $('.action3').removeClass('donut-segment-4');
+    };
+    },
+    offset: '350px'
+});
 
  }
 
