@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit,OnDestroy{
 //  sticky =true
 
   // constructor(private dialog: MatDialog,private renderer:Renderer2) { };
+slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
   constructor(
 
     private matdialog:MatDialog, private renderer:Renderer2, private profileservice:ProfileServiceService)
@@ -98,6 +99,8 @@ export class HomeComponent implements OnInit,OnDestroy{
 
 
 });
+// carousel
+
 
 }
 

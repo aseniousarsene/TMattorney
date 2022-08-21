@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { TeamprofileComponent } from './teamprofile/teamprofile.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { TeamprofileComponent } from './teamprofile/teamprofile.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatDialogModule
+    MatDialogModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
