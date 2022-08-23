@@ -3,7 +3,7 @@ import { MatDialog, MatDialogConfig } from  '@angular/material/dialog';
 import * as $ from 'jquery';
 import * as AOS from 'aos';
 import { Component, ElementRef, OnInit,Renderer2,ViewChild,AfterViewInit, OnDestroy } from '@angular/core';
-import { Position } from '@angular/compiler';
+// import { Position } from '@angular/compiler';
 import {
   trigger,
   state,
