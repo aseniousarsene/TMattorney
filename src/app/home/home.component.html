@@ -67,10 +67,10 @@ Effective Debt Collection and reliable Attorney Services
     <div class="headerbutton"  >
 
       <a class="btn btn-full" href="#"><span class="align-middle">Contact Us</span>
-        <i class=" material-icons material-icons-outlined align-middle ">perm_phone_msg</i>
+        <!-- <i class=" material-icons material-icons-outlined align-middle ">contact_mail</i> -->
       </a>
       <a class="btn btn-empty"href="#"><span class="align-middle">Learn More</span>
-        <i class=" material-icons material-icons-outlined align-middle ">chevron_right</i>
+        <!-- <i class=" material-icons material-icons-outlined align-middle ">chevron_right</i> -->
       </a>
 
     </div>
@@ -110,7 +110,7 @@ Effective Debt Collection and reliable Attorney Services
   <!-- <p style="display:none;" id="ff">try</p> -->
     <!-- <h4 style="margin-top: 40px;">water drinkability </h4> -->
     <!-- <h4 class="titles" data-aos="fade-in"> Services </h4> -->
-<div  class="sectionparagraph" data-aos="fade-right"    >
+<div  class="sectionparagraph" data-aos="fade-right"   id="container" >
   <p>Tsotetsi & Mchungu Incorporated is a modern legal practice established to render
     high quality and exceptional services to clients
 </p>
@@ -119,7 +119,7 @@ Effective Debt Collection and reliable Attorney Services
 
 <div class="row">
   <div class="homeservices debt-service" data-aos="fade-right" >
-    <div class="service-logo-div debt-logo">
+    <div class="service-logo-div ">
       <img class="service-logo" src="assets\images\debt.png">
       <div class="service-logo-effect"></div>
     </div>
@@ -132,7 +132,7 @@ Effective Debt Collection and reliable Attorney Services
 </div>
 </div>
 
-<div class="row">
+<div class="row" id="container" >
 
     <div class="col-lg-3">
 
@@ -247,7 +247,7 @@ Effective Debt Collection and reliable Attorney Services
 
   </div>
   <div class="buttonattribute" data-aos="fade-in">
-    <a class="btn btn-full" href="/services"><span class="align-middle">Learn More</span> </a>
+    <a class="btn btn-full align-middle" href="/services"><span >Learn More</span> </a>
   </div>
     </section>
 
@@ -255,9 +255,9 @@ Effective Debt Collection and reliable Attorney Services
   <div class="row team-section-title">
     <h4  class="titles"> Meet the Team </h4>
   </div>
-  <div class="row justify-content-center">
+  <div class="row team-row " id="container">
 
-    <div col-md-3 class="team-card"  *ngFor="let profile of profiles">
+    <div  class="col-md-3 team-card"  *ngFor="let profile of profiles">
 
       <div class="team-card-div "
       (click)="onClick(profile.id)">
