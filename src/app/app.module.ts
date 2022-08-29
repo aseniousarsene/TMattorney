@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { TeamprofileComponent } from './teamprofile/teamprofile.component';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
-import { CarouselModule } from '@coreui/angular';
+
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { CarouselModule } from '@coreui/angular';
     MaterialModule,
     MatDialogModule,
     MdbCarouselModule,
-    CarouselModule
+   
     
   ],
   providers: [],
