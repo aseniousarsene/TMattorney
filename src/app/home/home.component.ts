@@ -15,6 +15,7 @@ import {
 import { TeamprofileComponent } from '../teamprofile/teamprofile.component';
 import { ProfileServiceService } from './profile-service.service';
 import { profile } from '../shared/profile.model';
+import { translate } from '@angular/localize/src/utils';
 
 
 declare const Waypoint: any;
@@ -35,6 +36,16 @@ declare const Waypoint: any;
   //     ])
   //   ]),
   // ]
+  animations: [
+    trigger('enterTrigger', [
+    state('fadeIn', style({
+        opacity: '1',
+        // transform: 'translateX(0%)'
+        
+    })),
+    transition('void => *', [style({opacity: '0',}), animate('500ms')])
+    ])
+  ]
 })
 
 export class HomeComponent implements OnInit,OnDestroy{
@@ -50,7 +61,10 @@ export class HomeComponent implements OnInit,OnDestroy{
  scroll :number=0;
  selected = false;
  profiles:profile[];
- listener:any
+ listener:any;
+ cardNumber=1;
+ number=1;
+ ret=1
 //  sticky =true
 
   // constructor(private dialog: MatDialog,private renderer:Renderer2) { };
@@ -155,6 +169,53 @@ scrollToSection($section): void {
 ngOnDestroy(): void {
   this.listener();
   console.log('listener destroyed')
+}
+
+changecardforw(){
+  this.number=this.sicleNumberup()
+  
+  
+  console.log(this.number);
+  
+}
+
+changecardback(){
+  
+  
+  this.number=this.sicleNumberdown();
+  
+  console.log(this.number);
+  
+}
+
+
+
+  sicleNumberdown(){
+   this.cardNumber-=1;
+   if(this.cardNumber>3){
+     return 1
+   }
+   if (this.cardNumber<1) {
+    return 3
+   }
+   else {
+    return this.cardNumber
+   }
+}
+
+sicleNumberup(){
+  const ret =1
+  this.cardNumber+=1;
+  
+  if(this.cardNumber>3){
+    return 1
+  }
+  if (this.cardNumber<1) {
+   return 3
+  }
+  else {
+   return this.cardNumber
+  }
 }
 
 }
