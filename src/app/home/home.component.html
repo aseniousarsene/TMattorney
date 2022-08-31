@@ -414,7 +414,7 @@ Effective Debt Collection and reliable Attorney Services
           </div> -->
 
           <div class="card border-0 testimonial mb-6 " [ngSwitch]="number" >
-            <div class="card-body media" *ngSwitchCase="1" [@enterTrigger]="'fadeIn'">
+            <div class="card-body media" *ngSwitchCase="1" [@enterTrigger]="left? 'fadeInleft':'fadeIn'">
               
               <img src="/assets/images/peter7.png" class="mb-10 mr-3 rounded-circle" alt="...">
               <div class="media-body text-left">
@@ -425,7 +425,7 @@ Effective Debt Collection and reliable Attorney Services
               </div>
             </div>
 
-            <div class="card-body media" *ngSwitchCase="2" [@enterTrigger]="'fadeIn'">
+            <div class="card-body media" *ngSwitchCase="2" [@enterTrigger]="left? 'fadeInleft':'fadeIn'">
               
               <img src="/assets/images/stan2.png" class="mb-10 mr-3 rounded-circle" alt="...">
               <div class="media-body text-left">
@@ -436,7 +436,7 @@ Effective Debt Collection and reliable Attorney Services
               </div>
             </div>
 
-            <div class="card-body media" *ngSwitchCase="3" [@enterTrigger]="'fadeIn'">
+            <div class="card-body media" *ngSwitchCase="3" [@enterTrigger]="left? 'fadeInleft':'fadeIn'">
               
               <img src="/assets/images/tebza-meh2.png" class="mb-10 mr-3 rounded-circle" alt="...">
               <div class="media-body text-left">

@@ -15,7 +15,7 @@ import {
 import { TeamprofileComponent } from '../teamprofile/teamprofile.component';
 import { ProfileServiceService } from './profile-service.service';
 import { profile } from '../shared/profile.model';
-import { translate } from '@angular/localize/src/utils';
+
 
 
 declare const Waypoint: any;
@@ -40,10 +40,16 @@ declare const Waypoint: any;
     trigger('enterTrigger', [
     state('fadeIn', style({
         opacity: '1',
-        // transform: 'translateX(0%)'
+        transform: 'translateX(0%)'
         
     })),
-    transition('void => *', [style({opacity: '0',}), animate('500ms')])
+    state('fadeInleft', style({
+      opacity: '1',
+      transform: 'translateX(0%)'
+      
+  })),
+    transition('void => fadeIn', [style({opacity: '0',transform: 'translateX(-20%)'}), animate('200ms')]),
+    transition('void => fadeInleft', [style({opacity: '0',transform: 'translateX(20%)'}), animate('200ms')]),
     ])
   ]
 })
@@ -65,6 +71,7 @@ export class HomeComponent implements OnInit,OnDestroy{
  cardNumber=1;
  number=1;
  ret=1
+ left:boolean=false
 //  sticky =true
 
   // constructor(private dialog: MatDialog,private renderer:Renderer2) { };
@@ -174,7 +181,7 @@ ngOnDestroy(): void {
 changecardforw(){
   this.number=this.sicleNumberup()
   
-  
+  this.left=false
   console.log(this.number);
   
 }
@@ -183,6 +190,7 @@ changecardback(){
   
   
   this.number=this.sicleNumberdown();
+  this.left=true
   
   console.log(this.number);
   
