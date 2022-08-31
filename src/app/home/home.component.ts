@@ -41,7 +41,8 @@ export class HomeComponent implements OnInit,OnDestroy{
  @ViewChild('header',) headerElement: ElementRef;
  @ViewChild('service',) serviceElement: ElementRef;
  @ViewChild('team',) teamElement: ElementRef;
- @ViewChild('about',) aboutElement: ElementRef
+ @ViewChild('about',) aboutElement: ElementRef;
+ @ViewChild('float') butfloat!: ElementRef;
  headersection:number;
  servicesection:number;
  teamsection:number;
@@ -65,7 +66,14 @@ export class HomeComponent implements OnInit,OnDestroy{
 
     this.listener=this.renderer.listen(window,'scroll',($event)=> {
          this.scroll = window.scrollY;
-         console.log(this.scroll )
+         console.log(this.scroll );
+         if (window.scrollY > 800) {
+          this.butfloat.nativeElement.classList.add('floating');
+    
+        } else {
+          this.butfloat.nativeElement.classList.remove('floating');
+    
+          }
     });
 
     this.profiles = this.profileservice.getprofile();
