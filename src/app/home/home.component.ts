@@ -15,6 +15,7 @@ import {
 import { TeamprofileComponent } from '../teamprofile/teamprofile.component';
 import { ProfileServiceService } from './profile-service.service';
 import { profile } from '../shared/profile.model';
+import { ContactComponent } from '../contact/contact.component';
 
 
 
@@ -224,6 +225,15 @@ sicleNumberup(){
   else {
    return this.cardNumber
   }
+}
+
+onRequest(): void {
+  const dialogConfig2 = new MatDialogConfig ();
+  dialogConfig2.disableClose =false;
+  dialogConfig2.autoFocus=true ;
+  // dialogConfig2.panelClass='dialog-responsive2';
+  dialogConfig2.width='60%';
+  this.matdialog.open(ContactComponent,dialogConfig2);
 }
 
 }

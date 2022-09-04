@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { TeamprofileComponent } from './teamprofile/teamprofile.component';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -24,7 +26,8 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     DatapurificationComponent,
     PropertyandconeyancingComponent,
     ServicesComponent,
-    TeamprofileComponent
+    TeamprofileComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     MaterialModule,
     MatDialogModule,
     MdbCarouselModule,
+    ReactiveFormsModule
    
     
   ],

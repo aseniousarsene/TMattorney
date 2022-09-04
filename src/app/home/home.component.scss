@@ -1390,3 +1390,50 @@ button.back:disabled{
 button.forward:disabled{
   color:rgb(179, 178, 180)
 }
+
+
+.dialog-responsive2 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+  .dialog-responsive2 {
+      width: 100%;
+  }
+}
+
+.footer {
+  height: 40vh;
+  width: 100%;
+  background-color: #323138;
+  color: #d9d7d7;
+  font-size: 14px;
+
+}
+
+.footer-shell {
+  padding: 0 5vw;
+}
+
+.footer-middle{
+  height: 30%;
+  margin-bottom:40px ;
+}
+
+.footer-bottom{
+  border-top:0.5px solid rgba(128, 128, 128, 0.596);
+  padding-top:30px;
+  
+}
+
+.follow{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.call{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
