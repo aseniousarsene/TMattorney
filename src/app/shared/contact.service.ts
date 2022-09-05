@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { contact } from './models/contact.model';
+import { Firestore, collection, collectionData, doc, docData, addDoc, deleteDoc, updateDoc, } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +22,7 @@ export class ContactService {
 
   savedForms:contact[]=[]
 
-  constructor() { }
+  constructor(private firestore: Firestore) { }
 
   initializeFormGroup(): void {
     this.form.setValue(
@@ -31,14 +33,22 @@ export class ContactService {
         mobile :'',
         city :'',
         gender :'1',
-        subscription:'0',
+        type:'0',
         message:'',}
     );
 }
 
-addQuoteForm(contactForm: contact) {
-  this.savedForms.push(contactForm);
-  console.log(this.savedForms)
+getcontactForms():Observable<contact[]> {
+  const notesRef = collection(this.firestore, 'contactForm');
+  
+  return collectionData(notesRef, { idField: 'id'}) as Observable<contact[]>;
+}
+
+addcontactForm(contactForm: contact)  {
+
+
+  const notesRef = collection(this.firestore, 'contactForm');
+  return addDoc(notesRef, contactForm);
   
 }
 

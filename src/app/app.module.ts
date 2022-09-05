@@ -15,6 +15,12 @@ import { TeamprofileComponent } from './teamprofile/teamprofile.component';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { } from '@angular/fire';
+import {} from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { ThankyouComponent } from './contact/thankyou/thankyou.component';
 
 
 
@@ -27,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PropertyandconeyancingComponent,
     ServicesComponent,
     TeamprofileComponent,
-    ContactComponent
+    ContactComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     MatDialogModule,
     MdbCarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    provideFirebaseApp(() => initializeApp( environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
+  
+    
+  
    
     
   ],

@@ -16,6 +16,7 @@ import { TeamprofileComponent } from '../teamprofile/teamprofile.component';
 import { ProfileServiceService } from './profile-service.service';
 import { profile } from '../shared/profile.model';
 import { ContactComponent } from '../contact/contact.component';
+import { ContactService } from '../shared/contact.service';
 
 
 
@@ -79,7 +80,7 @@ export class HomeComponent implements OnInit,OnDestroy{
 
   constructor(
 
-    private matdialog:MatDialog, private renderer:Renderer2, private profileservice:ProfileServiceService)
+    private matdialog:MatDialog, private renderer:Renderer2, private profileservice:ProfileServiceService, private contactservice:ContactService)
     {};
 
   ngOnInit(){
@@ -235,6 +236,8 @@ onRequest(): void {
   dialogConfig2.width='60%';
   this.matdialog.open(ContactComponent,dialogConfig2);
 }
+
+
 
 }
 

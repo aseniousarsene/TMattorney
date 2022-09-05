@@ -6,7 +6,7 @@
 
     </mat-toolbar>
 
-    <form [formGroup]="form">
+    <form [formGroup]="form"  >
         <mat-grid-list [cols]="breakpoint" rowHeight="300px" (window:resize)="onResize($event)">
             <mat-grid-tile>
                 <div class="controles-container">
@@ -49,7 +49,7 @@
                         <mat-select formControlName="type" placeholder=" Query type">
                             <mat-option>None</mat-option>
                            <ng-container *ngFor="let type of type">
-                            <mat-option value="{{type.id}}">{{type.value}}</mat-option>
+                            <mat-option value="{{type.value}}">{{type.value}}</mat-option>
                            </ng-container>
                         </mat-select>
                       </mat-form-field>
@@ -71,6 +71,7 @@
         </mat-grid-list>
 
     </form>
+    
 </div>
 
 

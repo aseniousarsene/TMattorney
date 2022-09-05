@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 // import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const materialModules = [
   MatIconModule,
@@ -16,8 +17,8 @@ const materialModules = [
   MatGridListModule,
   MatInputModule,
   MatFormFieldModule,
- 
-  MatSelectModule
+   MatSelectModule,
+   MatProgressBarModule
 ];
 
 
