@@ -136,7 +136,7 @@ var terms = ["You can now make your paymenet using e-tshwane portail", "Make sur
 function rotateTerm() {
   var ct = $("#rotate").data("term") || 0;
   $("#rotate").data("term", ct == terms.length -1 ? 0 : ct + 1).text(terms[ct]).fadeIn()
-              .delay(6000).fadeOut(200, rotateTerm);
+              .delay(4000).fadeOut(200, rotateTerm);
 }
 $(rotateTerm);
 
